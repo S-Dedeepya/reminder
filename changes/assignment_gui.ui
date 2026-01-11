@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkApplicationWindow" id="main_window">
+    <property name="title">Assignment Deadline Manager</property>
+    <property name="default-width">700</property>
+    <property name="default-height">800</property>
+    <child>
+      <object class="GtkNotebook">
+        <child>
+          <object class="GtkFrame"><property name="margin-top">12</property><property name="margin-bottom">12</property><property name="margin-start">12</property><property name="margin-end">12</property>
+            <child>
+              <object class="GtkBox"><property name="orientation">vertical</property><property name="spacing">10</property><property name="margin-top">10</property><property name="margin-bottom">10</property><property name="margin-start">10</property><property name="margin-end">10</property>
+                <child><object class="GtkLabel"><property name="label">Problem Statement:</property><property name="halign">start</property></object></child>
+                <child><object class="GtkScrolledWindow"><property name="height-request">100</property><child><object class="GtkTextView" id="ps_view"><property name="wrap-mode">word-char</property></object></child></object></child>
+                <child><object class="GtkLabel"><property name="label">--- Student 1 ---</property><property name="margin-top">10</property></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Roll No:</property></object></child><child><object class="GtkEntry" id="s1_roll_entry"/></child></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Name:</property></object></child><child><object class="GtkEntry" id="s1_name_entry"/></child></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Year:</property></object></child><child><object class="GtkSpinButton" id="s1_year_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">4</property><property name="step-increment">1</property></object></property></object></child></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Semester:</property></object></child><child><object class="GtkSpinButton" id="s1_sem_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">8</property><property name="step-increment">1</property></object></property></object></child></object></child>
+                <child><object class="GtkLabel"><property name="label">--- Student 2 ---</property><property name="margin-top">10</property></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Roll No:</property></object></child><child><object class="GtkEntry" id="s2_roll_entry"/></child></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Name:</property></object></child><child><object class="GtkEntry" id="s2_name_entry"/></child></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Year:</property></object></child><child><object class="GtkSpinButton" id="s2_year_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">4</property><property name="step-increment">1</property></object></property></object></child></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">Semester:</property></object></child><child><object class="GtkSpinButton" id="s2_sem_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">8</property><property name="step-increment">1</property></object></property></object></child></object></child>
+                <child><object class="GtkBox"><property name="orientation">horizontal</property><property name="spacing">10</property><property name="halign">end</property><property name="margin-top">15</property>
+                    <child><object class="GtkButton" id="edit_details_button"><property name="label">Edit Details</property></object></child>
+                    <child><object class="GtkButton" id="save_button"><property name="label">Save Details</property></object></child>
+                </object></child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab"><object class="GtkLabel"><property name="label">Assignment Details</property></object></child>
+
+        <child>
+          <object class="GtkFrame"><property name="margin-top">12</property><property name="margin-bottom">12</property><property name="margin-start">12</property><property name="margin-end">12</property>
+            <child>
+              <object class="GtkBox"><property name="orientation">vertical</property><property name="spacing">15</property><property name="margin-top">15</property><property name="margin-bottom">15</property><property name="margin-start">15</property><property name="margin-end">15</property>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">&lt;b&gt;Task 1:&lt;/b&gt;</property><property name="use-markup">True</property></object></child><child><object class="GtkEntry" id="task1_name_entry"><property name="hexpand">True</property></object></child></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">From:</property></object></child><child><object class="GtkEntry" id="task1_from_entry"/></child><child><object class="GtkLabel"><property name="label">To:</property></object></child><child><object class="GtkEntry" id="task1_to_entry"/></child></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkCheckButton" id="task1_approval_check"><property name="label">Mentor Approval</property></object></child><child><object class="GtkButton" id="task1_save_button"><property name="label">Save Task 1</property><property name="halign">end</property><property name="hexpand">True</property></object></child></object></child>
+                <child><object class="GtkSeparator"><property name="margin-top">10</property><property name="margin-bottom">10</property></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">&lt;b&gt;Task 2:&lt;/b&gt;</property><property name="use-markup">True</property></object></child><child><object class="GtkEntry" id="task2_name_entry"><property name="hexpand">True</property></object></child></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">From:</property></object></child><child><object class="GtkEntry" id="task2_from_entry"/></child><child><object class="GtkLabel"><property name="label">To:</property></object></child><child><object class="GtkEntry" id="task2_to_entry"/></child></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkCheckButton" id="task2_approval_check"><property name="label">Mentor Approval</property></object></child><child><object class="GtkButton" id="task2_save_button"><property name="label">Save Task 2</property><property name="halign">end</property><property name="hexpand">True</property></object></child></object></child>
+                <child><object class="GtkSeparator"><property name="margin-top">10</property><property name="margin-bottom">10</property></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">&lt;b&gt;Task 3:&lt;/b&gt;</property><property name="use-markup">True</property></object></child><child><object class="GtkEntry" id="task3_name_entry"><property name="hexpand">True</property></object></child></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkLabel"><property name="label">From:</property></object></child><child><object class="GtkEntry" id="task3_from_entry"/></child><child><object class="GtkLabel"><property name="label">To:</property></object></child><child><object class="GtkEntry" id="task3_to_entry"/></child></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><child><object class="GtkCheckButton" id="task3_approval_check"><property name="label">Mentor Approval</property></object></child><child><object class="GtkButton" id="task3_save_button"><property name="label">Save Task 3</property><property name="halign">end</property><property name="hexpand">True</property></object></child></object></child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab"><object class="GtkLabel"><property name="label">Tasks</property></object></child>
+
+        <child>
+          <object class="GtkFrame"><property name="margin-top">12</property><property name="margin-bottom">12</property><property name="margin-start">12</property><property name="margin-end">12</property>
+            <child>
+              <object class="GtkBox"><property name="orientation">vertical</property><property name="spacing">20</property><property name="margin-start">20</property><property name="margin-end">20</property><property name="margin-top">20</property><property name="margin-bottom">20</property>
+                <child><object class="GtkCalendar" id="alarm_calendar"><property name="halign">center</property></object></child>
+                <child><object class="GtkBox"><property name="spacing">10</property><property name="halign">center</property>
+                    <child><object class="GtkLabel"><property name="label">Hour:</property></object></child>
+                    <child><object class="GtkSpinButton" id="alarm_hour"><property name="adjustment"><object class="GtkAdjustment"><property name="upper">23</property><property name="step-increment">1</property></object></property></object></child>
+                    <child><object class="GtkLabel"><property name="label">Minute:</property></object></child>
+                    <child><object class="GtkSpinButton" id="alarm_minute"><property name="adjustment"><object class="GtkAdjustment"><property name="upper">59</property><property name="step-increment">1</property></object></property></object></child>
+                    <child><object class="GtkLabel"><property name="label">Second:</property></object></child>
+                    <child><object class="GtkSpinButton" id="alarm_second"><property name="adjustment"><object class="GtkAdjustment"><property name="upper">59</property><property name="step-increment">1</property></object></property></object></child>
+                </object></child>
+                <child>
+                  <object class="GtkButton" id="set_alarm_button">
+                    <property name="label">Set/Update Alarm</property><property name="halign">center</property>
+                    <style><class name="accent-button"/></style>
+                  </object>
+                </child>
+                <child><object class="GtkLabel" id="alarm_status_label"><property name="label">Status: No alarm has been set.</property><property name="wrap">True</property><property name="halign">center</property></object></child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab"><object class="GtkLabel"><property name="label">Deadline Alarm</property></object></child>
+
+        <child>
+          <object class="GtkFrame"><property name="margin-top">12</property><property name="margin-bottom">12</property><property name="margin-start">12</property><property name="margin-end">12</property>
+            <child>
+              <object class="GtkBox"><property name="orientation">vertical</property><property name="spacing">10</property><property name="margin-start">10</property><property name="margin-end">10</property><property name="margin-top">10</property><property name="margin-bottom">10</property>
+                <child><object class="GtkLabel"><property name="label">Project Summary (Read-Only):</property><property name="halign">start</property></object></child>
+                <child><object class="GtkScrolledWindow"><property name="vexpand">True</property><child><object class="GtkTextView" id="log_view"><property name="editable">False</property><property name="cursor-visible">False</property><property name="wrap-mode">word-char</property></object></child></object></child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab"><object class="GtkLabel"><property name="label">Project Log</property></object></child>
+      </object>
+    </child>
+  </object>
+</interface>

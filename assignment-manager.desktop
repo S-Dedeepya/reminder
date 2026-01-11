@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Assignment Manager
+Comment=Track assignment tasks and deadlines
+Path=/home/dedeepya/Assignment-manager/
+Exec=env GTK_THEME=Adwaita:dark ./assignment_app
+Icon=ccessories-text-editor
+Terminal=false
+Type=Application
+Categories=Utility;Education;GTK;

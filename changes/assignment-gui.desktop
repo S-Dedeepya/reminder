@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Assignment Manager
+Comment=A simple deadline and log manager
+
+# This line tells the system to go to your project folder first. This is the fix.
+Path=/home/abhinay/Desktop/assignment-gui/
+
+# This line runs the program.
+Exec=/home/abhinay/Desktop/assignment-gui/assignment_gui
+
+Icon=accessories-text-editor
+Terminal=false
+Categories=Utility;Office;

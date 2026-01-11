@@ -1,18 +1,9 @@
-Student 1 details :- 
-
-Roll_no      : 24091A3203
-Student name : Abhinay
-Year         : 2
-Semester     : 1
-
-
-Student 2 details :- 
-
-Roll_no      : 24091A3231
-Student name : dedeepya
-Year         : 3
-Semester     : 1
-
-
-Problem_statement :
-sdfghj dfghj dfghjk sdfghj
+Simple Assignment Deadline Reminder System
+24091A3203
+S.ABHINAY
+2
+1
+24091A3231
+S.DEDEEPYA
+2
+1

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct student
+struct node
 {
     char roll_no[50];
     char name[50];
@@ -9,7 +9,7 @@ struct student
 };
 int main()
 {
-    struct student s1;
+    struct node s1;
     FILE *fp = NULL;
     fp = fopen("stu_details.txt", "w");
     if (fp == NULL)
@@ -34,7 +34,7 @@ int main()
     fprintf(fp, "\n");
     fprintf(fp, "\n");
     fclose(fp);
-    struct student s2;
+    struct node s2;
     FILE *fps = NULL;
     fps = fopen("stu_details.txt", "a");
     if (fps == NULL)

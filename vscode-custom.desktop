@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=VS Code (Custom)
+Comment=Visual Studio Code from my home folder
+Exec="/home/dedeepya/VS CODE/code" %F
+Icon=/home/dedeepya/VS CODE/resources/app/resources/linux/code.png
+Terminal=false
+Type=Application
+Categories=Utility;Development;IDE;

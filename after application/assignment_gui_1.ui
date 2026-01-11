@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkApplicationWindow" id="main_window">
+    <property name="title">Assignment Deadline Manager</property>
+    <property name="default-width">600</property>
+    <property name="default-height">700</property>
+    <child>
+      <object class="GtkNotebook">
+        <child>
+          <object class="GtkGrid" id="details_grid">
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">10</property>
+            <property name="row-spacing">10</property>
+            <property name="column-spacing">10</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Problem Statement:</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="column-span">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="height-request">150</property>
+                <child>
+                  <object class="GtkTextView" id="ps_view">
+                    <property name="wrap-mode">word-char</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">1</property>
+                  <property name="column-span">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">--- Student 1 ---</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">2</property>
+                  <property name="column-span">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Roll No:</property><layout><property name="column">0</property><property name="row">3</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="s1_roll_entry"><layout><property name="column">1</property><property name="row">3</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Name:</property><layout><property name="column">0</property><property name="row">4</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="s1_name_entry"><layout><property name="column">1</property><property name="row">4</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Year:</property><layout><property name="column">0</property><property name="row">5</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="s1_year_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">4</property><property name="step-increment">1</property></object></property><layout><property name="column">1</property><property name="row">5</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Semester:</property><layout><property name="column">0</property><property name="row">6</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="s1_sem_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">8</property><property name="step-increment">1</property></object></property><layout><property name="column">1</property><property name="row">6</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">--- Student 2 ---</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">7</property>
+                  <property name="column-span">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Roll No:</property><layout><property name="column">0</property><property name="row">8</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="s2_roll_entry"><layout><property name="column">1</property><property name="row">8</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Name:</property><layout><property name="column">0</property><property name="row">9</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="s2_name_entry"><layout><property name="column">1</property><property name="row">9</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Year:</property><layout><property name="column">0</property><property name="row">10</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="s2_year_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">4</property><property name="step-increment">1</property></object></property><layout><property name="column">1</property><property name="row">10</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkLabel"><property name="label">Semester:</property><layout><property name="column">0</property><property name="row">11</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="s2_sem_spin"><property name="adjustment"><object class="GtkAdjustment"><property name="lower">1</property><property name="upper">8</property><property name="step-increment">1</property></object></property><layout><property name="column">1</property><property name="row">11</property></layout></object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">10</property>
+                <property name="halign">center</property>
+                <child>
+                  <object class="GtkButton" id="load_button">
+                    <property name="label">Load Details</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="save_button">
+                    <property name="label">Save Details</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">12</property>
+                  <property name="column-span">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="label">Assignment Details</property>
+          </object>
+        </child>
+        
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="spacing">10</property>
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">10</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Enter your log update below:</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="vexpand">True</property>
+                <child>
+                  <object class="GtkTextView" id="log_view"/>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="add_log_button">
+                <property name="label">Add Log Entry</property>
+                <property name="halign">end</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="label">Project Log</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="spacing">20</property>
+            <property name="margin-start">20</property>
+            <property name="margin-end">20</property>
+            <property name="margin-top">20</property>
+            <property name="margin-bottom">20</property>
+            <child>
+              <object class="GtkCalendar" id="alarm_calendar">
+                <property name="halign">center</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkGrid">
+                <property name="column-spacing">10</property>
+                <property name="halign">center</property>
+                <child><object class="GtkLabel"><property name="label">Hour:</property><layout><property name="column">0</property><property name="row">0</property></layout></object></child>
+                <child><object class="GtkSpinButton" id="alarm_hour"><property name="adjustment"><object class="GtkAdjustment"><property name="upper">23</property><property name="step-increment">1</property></object></property><layout><property name="column">1</property><property name="row">0</property></layout></object></child>
+                <child><object class="GtkLabel"><property name="label">Minute:</property><layout><property name="column">2</property><property name="row">0</property></layout></object></child>
+                <child><object class="GtkSpinButton" id="alarm_minute"><property name="adjustment"><object class="GtkAdjustment"><property name="upper">59</property><property name="step-increment">1</property></object></property><layout><property name="column">3</property><property name="row">0</property></layout></object></child>
+                <child><object class="GtkLabel"><property name="label">Second:</property><layout><property name="column">4</property><property name="row">0</property></layout></object></child>
+                <child><object class="GtkSpinButton" id="alarm_second"><property name="adjustment"><object class="GtkAdjustment"><property name="upper">59</property><property name="step-increment">1</property></object></property><layout><property name="column">5</property><property name="row">0</property></layout></object></child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="set_alarm_button">
+                <property name="label">Set/Update Alarm</property>
+                <property name="halign">center</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="alarm_status_label">
+                <property name="label">Status: No alarm has been set.</property>
+                <property name="wrap">True</property>
+                <property name="halign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="label">Deadline Alarm</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
